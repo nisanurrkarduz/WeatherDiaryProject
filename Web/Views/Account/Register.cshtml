@@ -1,0 +1,61 @@
+    @model Web.Entity.User
+    @{
+        ViewData["Title"] = "Kayıt Ol";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card shadow-lg border-0 rounded-lg">
+                    <div class="card-header bg-success text-white text-center py-3">
+                        <h3 class="font-weight-light my-2">Kayıt Ol</h3>
+                    </div>
+                    <div class="card-body p-4">
+                        @if (ViewBag.Error != null)
+                        {
+                            <div class="alert alert-danger" role="alert">
+                                <i class="fa-solid fa-circle-exclamation me-2"></i> @ViewBag.Error
+                            </div>
+                        }
+
+                        <form asp-action="Register" method="post">
+                            <div class="form-floating mb-3">
+                                <input asp-for="Username" class="form-control" placeholder="Kullanıcı Adı" required />
+                                <label asp-for="Username">Kullanıcı Adı</label>
+                            </div>
+                            
+                            <div class="form-floating mb-3">
+                                <input asp-for="Email" class="form-control" type="email" placeholder="name@example.com" />
+                                <label asp-for="Email">E-posta Adresi</label>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3 mb-md-0">
+                                        <input asp-for="PasswordHash" class="form-control" type="password" placeholder="Şifre" required />
+                                        <label asp-for="PasswordHash">Şifre</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3 mb-md-0">
+                                        <input name="confirmPassword" class="form-control" type="password" placeholder="Şifre Tekrar" required />
+                                        <label>Şifre Tekrar</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-grid gap-2 mt-4">
+                                <button type="submit" class="btn btn-success btn-lg">Kayıt Ol</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center py-3">
+                        <div class="small">
+                            <a asp-action="Login" class="text-decoration-none">Zaten hesabın var mı? Giriş Yap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "Web.GrpcService";
+
+package advice;
+
+service AdviceService {
+  rpc GetAdvice (AdviceRequest) returns (AdviceReply);
+}
+
+message AdviceRequest {
+  string mood = 1;           // Mutlu/Stresli/Nötr (Node’dan)
+  double temperature = 2;    // sicaklik
+  double precipitation = 3;  // yagis
+}
+
+message AdviceReply {
+  string advice = 1;
+}

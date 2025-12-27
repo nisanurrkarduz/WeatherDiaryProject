@@ -1,0 +1,113 @@
+﻿@{
+    ViewData["Title"] = "Gizlilik Politikası";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-dark text-white py-4">
+            <div class="d-flex align-items-center">
+                <i class="fa-solid fa-shield-halved fa-3x me-3 text-warning"></i>
+                <div>
+                    <h2 class="mb-0">Gizlilik Politikası</h2>
+                    <p class="mb-0 text-white-50">Son Güncelleme: @DateTime.Now.ToString("dd MMMM yyyy")</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-body p-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="lead text-muted">
+                        "Weather Diary" projesi olarak, kullanıcılarımızın kişisel verilerinin güvenliğine ve gizliliğine büyük önem veriyoruz. Bu politika, verilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklamaktadır.
+                    </p>
+                    <hr class="my-4">
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0">
+                            <span class="fa-stack fa-lg text-primary">
+                                <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                <i class="fa-solid fa-database fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="fw-bold">Toplanan Veriler</h5>
+                            <p class="text-secondary small">
+                                Sistemimize kayıt olurken sağladığınız kullanıcı adı, e-posta adresi ve şifre (güvenli bir şekilde hashlenmiş) gibi bilgileri saklıyoruz. Ayrıca, hava durumu sorgularınız ve duygu analizi sonuçlarınız anonimleştirilerek istatistiksel amaçlarla veritabanımızda tutulmaktadır.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0">
+                            <span class="fa-stack fa-lg text-success">
+                                <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                <i class="fa-solid fa-server fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="fw-bold">Verilerin Kullanımı</h5>
+                            <p class="text-secondary small">
+                                Toplanan veriler, size daha doğru hava durumu tahminleri sunmak ve hava koşullarının insan psikolojisi üzerindeki etkilerini analiz etmek (Makine Öğrenmesi modellerimizi eğitmek) amacıyla kullanılır. Verileriniz üçüncü şahıslarla paylaşılmaz.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0">
+                            <span class="fa-stack fa-lg text-warning">
+                                <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                <i class="fa-solid fa-lock fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="fw-bold">Güvenlik</h5>
+                            <p class="text-secondary small">
+                                Veritabanımızda şifreleriniz düz metin olarak değil, hashlenmiş formatta saklanır. Sistemimiz, rol tabanlı yetkilendirme (RBAC) kullanarak yetkisiz erişimleri engeller. Yönetici paneline sadece yetkili personeller erişebilir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0">
+                            <span class="fa-stack fa-lg text-info">
+                                <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                <i class="fa-solid fa-cookie-bite fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="fw-bold">Çerezler (Cookies)</h5>
+                            <p class="text-secondary small">
+                                Oturum açma işlemlerinizi hatırlamak ve kullanıcı deneyiminizi iyileştirmek için tarayıcınızda küçük metin dosyaları (çerezler) saklıyoruz. Bu çerezler, oturumunuzu güvenli bir şekilde yönetmemizi sağlar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-light border mt-4">
+                <h6 class="fw-bold"><i class="fa-solid fa-envelope me-2"></i>İletişim</h6>
+                <p class="mb-0 small">
+                    Gizlilik politikamızla ilgili sorularınız veya verilerinizin silinmesi talebi için 
+                    <a href="mailto:destek@ogeceisiklarsonmedi.com" class="text-decoration-none fw-bold">destek@weatherdiary.com</a> 
+                    adresinden bize ulaşabilirsiniz.
+                </p>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a asp-controller="Home" asp-action="Index" class="btn btn-outline-dark">
+                    <i class="fa-solid fa-arrow-left me-1"></i> Anasayfaya Dön
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

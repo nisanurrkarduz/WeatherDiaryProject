@@ -1,0 +1,58 @@
+@model List<Web.Entity.UserLogDetail>
+@{
+    ViewData["Title"] = "Detaylı Raporlar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2><i class="fa-solid fa-chart-pie me-2"></i>Sistem Raporları</h2>
+        <a asp-action="YuksekSicakliklar" class="btn btn-warning">
+            <i class="fa-solid fa-fire me-1"></i> Yüksek Sıcaklıklar (SP)
+        </a>
+    </div>
+
+    <div class="alert alert-info">
+        <i class="fa-solid fa-database me-2"></i>
+        Bu sayfa veritabanındaki <strong>View_UserLogDetails</strong> View'inden beslenmektedir.
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <table class="table table-hover align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th>Kullanıcı</th>
+                        <th>Şehir</th>
+                        <th>Sıcaklık</th>
+                        <th>Hava Tipi</th>
+                        <th>Tarih</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <span class="fw-bold text-primary">@item.Username</span>
+                            </td>
+                            <td>@item.CityName</td>
+                            <td>
+                                @if (item.Temperature > 25)
+                                {
+                                    <span class="badge bg-danger">@item.Temperature °C</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-info text-dark">@item.Temperature °C</span>
+                                }
+                            </td>
+                            <td>@item.WeatherType</td>
+                            <td>@item.LogDate?.ToString("dd.MM.yyyy HH:mm")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

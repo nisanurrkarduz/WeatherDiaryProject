@@ -1,0 +1,155 @@
+YAZILIM MÜHENDİSLİĞİ BÖLÜMÜ
+SERVİS ODAKLI MİMARİ, VERİ TABANI, İLERİ WEB PROGRAMLAMA, MAKİNE ÖĞRENMESİ
+PROJE YÖNERGESİ
+1. Amaç
+Bu proje çalışmasının amacı, yazılım mühendisliği öğrencilerinin seçmeli ve zorunlu dersleri birleştirerek tek bir proje haline getirebilme yeteneğini kazandırmaktır. Ders projelerinde öğrencinin teknolojik çözümler geliştirmesini teşvik etmek, ekip çalışmasını kuvvetlendirmek, sürdürülebilir kalkınma hedefleriyle uyumlu yazılım tabanlı uygulamalar tasarlamalarını sağlamak, proje yönetimi ile etik sorumluluk bilincini güçlendirmektir.
+2. Kapsam
+Proje, öğrencilerin yazılım mühendisliği bilgi ve becerilerini kullanarak ders özelinde belirtilen isterleri sağlayan teknoloji tabanlı bir çözüm üretmelerini kapsar. Projeler, aşağıda belirtilen konu başlıklarından biri çerçevesinde yürütülebilinir.
+3. Proje Konu Başlıkları
+•	Yenilenebilir Enerji ve Dönüşüm Sistemleri/Teknolojileri
+•	Akıllı Şebekeler
+•	Verimli Enerji Dağıtımı ve Yönetimi
+•	Enerji Depolama Sistemleri
+•	Dijital Ödeme Sistemleri
+•	Güç ve Enerji Sistemlerinde Veri Bilimi ve Yapay Zekâ Kullanımı
+•	Dijital İkiz (Digital Twin) Uygulamaları
+•	Sürdürülebilir Çevre Teknolojileri
+•	Sürdürülebilir Gıda Teknolojileri
+•	Akıllı Şehir Uygulamaları
+•	Akıllı Trafik Yönetimi
+•	Kaynakların Verimli Yönetimi
+•	Akıllı Atık Yönetimi
+•	Kirlilik Çözümüne Yönelik Uygulamalar
+•	Akıllı Ağ Yönetimi
+•	Siber Güvenlik ve Blokzinciri Uygulamaları
+•	Endüstri 5.0 ve Optimizasyon Uygulamaları
+4. Proje Takımları
+•	Her takım en az 4, en fazla 5 öğrenciden oluşmalıdır.
+•	Takım üyeleri, proje süreci boyunca görev dağılımını belirlemeli ve proje sunumunda açıkça belirtmelidir.
+•	Her takım bir takım lideri belirlemelidir.
+
+5. Ders İsterleri
+VERİ TABANI:
+RDMBS (MySQL, PostGreSQL, Oracle)
+	Veritabanı tasarımı: 
+		En az 6 adet varlık kullanımı (10 puan) 
+		Normalizasyon içeren uygun varlık ilişki modelinin belirlenmesi (10 puan) 
+		Veri bütünlüğünü sağlamak adına uygun anahtar ve veri bütünlüğü stratejisi kullanımı (10 puan) 
+		Veri bütünlüğü için (en az 3 farklı türde) en az 5 adet constraint (kısıt) kullanımı (10 puan)  
+		Sorgu performansı için kullanılan stratejiler (10 puan)
+	View, Stored procedure ve kullanıcı tanımlı fonksiyon kullanımı: 
+		En az 2 stored procedure (10 puan) 
+		En az 5 view kullanımı (10 puan) 
+		En az 2 kullanıcı tanımlı fonksiyon kullanımı (10 puan) 
+	Uygulama ve kullanıcılar için uygun yetkilendirme ve maskeleme operasyonları (10 puan) 
+	Ön yüz tasarımı (10 puan) 
+
+RDMBS (MsSQL)
+	Veritabanı tasarımı: 
+		En az 6 adet varlık kullanımı (10 puan)
+		Uygun veri modelinin belirlenmesi ve veri tabanı oluşturma (10 puan)
+		Sorgu performansı için kullanılan stratejiler (10 puan)
+	Veri ambarı oluşturma:
+		ETL adımlarını takip edecek şekilde veri ambarı oluşturma (10 puan)
+		En az 5 adet farklı türde SSIS package oluşturma (10 puan)
+		Oluşturulan veri ambarını temel özellikleri barındırması (10 puan)
+	OLAP Cube Oluşturma:
+		Multidimenisonal SSAS projesi oluşturma (10 puan)
+		Küp içerisinde en az 5 adet measure tanımlama (10 puan)
+		Küp içerisinde en az 5 adet measure barındırma (10 puan)
+		MsSQL Server Analysis servisler kullanarak küp analizi (10 puan)
+		+OLAP kübünü bir ön yüze bağlayarak web projesi oluşturma (10 puan)
+		
+NoSQL (MongoDB)
+	Veritabanı tasarımı:
+		Projede kullanılacak yarı yapısal ve yapısal olmayan veri modellerinin tanımlanması (10 puan)
+		En az 20 adet koleksiyon oluşturma (10 puan)
+		En az 2 iç içe koleksiyon kullanımı (10 puan)
+		En az 5 farklı veri modeli kullanımı (10 puan)
+	CRUD işlemlerinin gerçekleştirilmesi (10 puan)
+	Veri kümeleme ve fonksiyon kullanımı (10 puan)
+	Kullanıcı tanımlı fonksiyon oluşturma (10 puan)
+	Sorgu performansı için kullanılan stratejiler (10 puan)
+	Uygulama ve kullanıcılar için uygun yetkilendirme operasyonları (10 puan) 
+	Ön yüz tasarımı (10 puan)
+	
+NoSQL (OrientDB-Neo4j)
+	Veritabanı tasarımı:
+		Projede kullanılacak yarı yapısal ve yapısal olmayan veri modellerinin tanımlanması (10 puan)
+		En az 6 adet etiket kullanımı (10 puan)
+		En az 20 adet düğüm oluşturma (10 puan)
+		En az 20 adet ayrıt kullanımı (10 puan)
+		En az 5 farklı veri modeli kullanımı (10 puan)
+	CRUD işlemlerinin gerçekleştirilmesi (10 puan)
+	Veri kümeleme ve fonksiyon kullanımı (10 puan)
+	Çizge üzerinde dolaşan algoritmalar ile veri bulma (10 puan)
+	Sorgu performansı için kullanılan stratejiler (10 puan)
+	Uygulama ve kullanıcılar için uygun yetkilendirme operasyonları (10 puan) 
+	Ön yüz tasarımı (10 puan)
+
+SERVİS ODAKLI MİMARİ:
+1.	6 Katmanlı SOA tasarımı (20 puan)
+2.	SOAP iletişim protokolü ile en az bir iletişim sağlama (20 puan)
+3.	gRPC protokolü ile en az bir iletişim sağlama (20 puan)
+4.	Node.js/Vue.js ile yazılmış API (20 puan)
+5.	En az bir hazır API kullanımı (20 puan)
+İLERİ WEB PROGRAMLAMA:
+1.	En az 5 farklı Controller ve 3 farklı Action kullanılmalı (10 puan)
+2.	Viewler esnek tasarımlı olmalı (10 puan)
+3.	Çalışmada PartialView veya ViewComponent kullanılmalı ve View'lerde dinamik şekilde değiştiği gösterilmeli (10 puan)
+4.	Kendi yazdığınız bir Layout olmalı ve en az 3 Viewde kullanılmalı (10 puan)
+5.	Veritabanı bağlantısı olmalı temel CRUD işlemlerinin her biri kullanılmalı (20 puan)
+6.	En az 2 farklı kullanıcı tipi tanımlanmalı ve rollere göre içeriğin değiştiği gösterilmeli (20 puan)
+7.	Bir Viewde kullanıcı tarafından girilen bilginin farklı bir View üzerinden erişimi mümkün olmalıdır. (İlk sayfadan girilen veri Controllerdan Viewbag, Viewdata veya Tempdata  ile diğer sayfaya aktarılmalı) (20 puan)
+MAKİNE ÖĞRENMESİ:
+1.	Konu-probleminin öğrenci tarafından belirlendiği veri toplanmalı (20 puan)
+2.	Detaylı EDA yapılmalı (20 puan)
+3.	ML modelleri eğitilmeli (20 puan)
+4.	En iyi model seçilmeli (20 puan)
+5.	Elde edilen model servis ile projeye bağlanmalı (web flask vs) (20 puan)
+6. Teslim ve Sunum Takvimi
+Proje raporu, giriş, yöntem, sistem tasarımı, uygulama ve sonuçlar bölümlerini içermelidir.
+Proje sonuçları sunum olarak paylaşılacaktır.
+Aşama	Teslim Tarihi	İçerik
+Proje Teslimi	14. Hafta	Proje kodlarının github linki ve power point sunum dosyası Teams üzerinden her dersin açılan ödevine grup başına (grup lideri tarafından) yüklenmelidir.
+Proje Sunumları	15. Hafta	Proje Demosu ders asistanlarının ilan ettiği gün ve saat çerçevesinde yapılacaktır.
+
+NOT: Örnek proje birleştirme açıklama ve öneri-senaryosu
+
+
+Projenin Birleşme Analizi ve Örnek Konu Eşleşmesi
+
+Projeniz, tüm ders isterlerini tek bir dikey entegre uygulamada birleştirmek için ideal bir yapı sunuyor. İşte derslerin nasıl bir araya gelebileceğinin analizi:
+Ders	Uygulamadaki Rolü	Birleşme Noktası
+Makine Öğrenmesi	Uygulamanın "Akıllı Çekirdeği". Projenin ana katma değerini (tahmin, sınıflandırma, optimizasyon) sağlar.	Elde edilen ML Modelinin, Servis Odaklı Mimari (SOA) kullanarak bir API (Endpoint) üzerinden sunulması.
+Servis Odaklı Mimari (SOA)	Uygulamanın "Omurgası" ve bileşenler arası iletişim katmanı. ML modelini ve veri tabanı işlemlerini Web projesine sunan mikroservislerin tasarlanması.	6 Katmanlı Tasarımda 2, ML Modelini ve CRUD işlemlerini ayrı servisler olarak sunan (SOAP/gRPC/Node.js API) 3 bir katman oluşturmak.
+
+Veri Tabanı	Uygulamanın "Veri Yönetim Katmanı". Hem uygulamanın CRUD verilerini hem de Makine Öğrenmesi modelini eğitmek için toplanan/işlenen verileri barındırır.	İsterlere uygun olarak en az 6 varlık içeren Normalizasyon yapılmış bir RDMBS (MySQL, PostGreSQL) 4veya proje konusu uygunsa NoSQL (MongoDB, Neo4j) 5 kullanımı.
+
+İleri Web Programlama	Uygulamanın "Kullanıcı Arayüzü" ve kullanıcı etkileşim noktası. SOA katmanından gelen verileri ve ML sonuçlarını gösteren esnek bir arayüz oluşturulması.	SOA katmanından gelen verilerle CRUD işlemlerini 6gerçekleştiren, farklı kullanıcı tipleri ve rolleri 7yöneten dinamik bir Web uygulaması (Controller, View, PartialView kullanarak) 8 tasarlanması.
+
+________________________________________
+Örnek Proje Önerisi (Tüm Dersleri Birleştiren)
+
+Tüm dersleri birleştiren bir uygulama taslağı:
+
+Proje Konu Başlığı	Proje Adı (Örnek)
+	Güç ve Enerji Sistemlerinde Veri Bilimi ve Yapay Zekâ Kullanımı 11
+	Akıllı Şehir İçin Enerji Tüketim Tahmini ve Optimizasyon Sistemi
+
+Uygulama Mimarisi ve Ders İsterlerinin Karşılanması
+
+Ders	Nasıl Karşılanır?	İsterler (Örnek)
+	MAKİNE ÖĞRENMESİ 12
+	Tarihsel enerji tüketim verileri toplanır, detaylı EDA yapılır13. Regresyon modelleri (ML Modelleri Eğitilmeli 14) ile gelecek 24 saatlik enerji talebi tahmin edilir. En iyi model seçilir15.
+	1. Tüketim verisi toplama (20 puan). 2. EDA (20 puan). 3. Regresyon model eğitimi (20 puan). 4. En iyi model seçimi (20 puan).
+	SERVİS ODAKLI MİMARİ 16
+		6 Katmanlı SOA Tasarımı 17 ile sistem oluşturulur. Tahmin modelini çalıştıran bir mikroservis, Python Flask/Django (ML Servisi) üzerinde koşar. Bu servis, diğer bileşenlerle iletişim kurmak için gRPC veya SOAP kullanır18. Web projesinin veri çekmek/göstermek için kullandığı ana API ise Node.js ile yazılır19.
+	1. 6 Katmanlı SOA tasarımı (20 puan). 2. gRPC/SOAP kullanımı (20+20 puan). 3. Node.js API (20 puan).
+	VERİ TABANI (RDMBS) 20
+	Tüketim verileri, kullanıcı bilgileri, tahmin sonuçları ve akıllı sayaç bilgileri için bir RDMBS (PostgreSQL) kullanılır. Sistemde Kullanıcı, Sayaç, Tüketim, Tahmin, Bölge, Fatura gibi en az 6 varlık 21 tasarlanır. Veri bütünlüğü için kısıtlar (constraint) kullanılır. Veri analizi ve raporlama için View ve Stored Procedure'ler 22 oluşturulur.
+	En az 6 varlık (10 p.), Normalizasyon (10 p.), 5 Constraint (10 p.), 5 View & 2 Stored Proc. (20 p.).	
+	İLERİ WEB PROGRAMLAMA 23
+	Tüketim ve tahmin sonuçlarını gösteren kullanıcı arayüzü tasarlanır. Sisteme Yönetici ve Son Kullanıcı olmak üzere 2 farklı rol tanımlanır24. Yönetici, tahmin modeli sonuçlarını incelerken, Son Kullanıcı sadece kendi tüketim verilerini görür (Rollere göre içeriğin değiştiği gösterilir 25). Web katmanı, SOA servisleri üzerinden veritabanı CRUD işlemlerini gerçekleştirir26.
+	2 Farklı kullanıcı tipi/rol (20 p.), CRUD işlemleri (20 p.), Controller/Action/View kullanımı (10+10 p.).	
+

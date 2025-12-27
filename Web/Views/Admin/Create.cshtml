@@ -1,0 +1,52 @@
+    @model Web.Entity.DailyLog
+
+    @{
+        ViewData["Title"] = "Yeni Kayıt Ekle";
+        Layout = "_OzelLayout";
+    }
+
+    <div class="container mt-4">
+        <h2>📝 Yeni Hava Kaydı Ekle</h2>
+        <hr />
+        <div class="row">
+            <div class="col-md-6">
+                <form asp-action="Create">
+                    
+                    <!-- Şehir Seçimi -->
+                    <div class="form-group mb-3">
+                        <label class="control-label">Şehir</label>
+                        <select asp-for="CityId" class="form-control" asp-items="ViewBag.CityId"></select>
+                    </div>
+
+                    <!-- Sıcaklık -->
+                    <div class="form-group mb-3">
+                        <label asp-for="Temperature" class="control-label">Sıcaklık (°C)</label>
+                        <input asp-for="Temperature" class="form-control" type="number" step="0.1" />
+                    </div>
+
+                    <!-- Nem -->
+                    <div class="form-group mb-3">
+                        <label asp-for="Humidity" class="control-label">Nem (%)</label>
+                        <input asp-for="Humidity" class="form-control" type="number" />
+                    </div>
+
+                    <!-- Hava Tipi -->
+                    <div class="form-group mb-3">
+                        <label class="control-label">Hava Durumu</label>
+                        <select asp-for="WeatherTypeId" class="form-control" asp-items="ViewBag.WeatherTypeId"></select>
+                    </div>
+
+                    <!-- Kullanıcı Seçimi -->
+                    <div class="form-group mb-3">
+                        <label class="control-label">Kaydeden Kullanıcı</label>
+                        <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <input type="submit" value="Kaydet" class="btn btn-primary" />
+                        <a asp-action="Index" class="btn btn-secondary">Listeye Dön</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

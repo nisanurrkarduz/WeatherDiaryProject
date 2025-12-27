@@ -1,0 +1,29 @@
+@model List<Web.Controllers.HighTempViewModel>
+@{
+    ViewData["Title"] = "Yüksek Sıcaklık Raporu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2><i class="fa-solid fa-fire text-danger me-2"></i>Yüksek Sıcaklık Kayıtları (>20°C)</h2>
+    <p class="text-muted">Bu veriler veritabanı üzerindeki <strong>Stored Procedure (sp_GetHighTempLogs)</strong> kullanılarak çekilmiştir.</p>
+    
+    <div class="mt-3">
+        <a asp-action="Raporlar" class="btn btn-secondary mb-3">&larr; Raporlara Dön</a>
+    </div>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card border-danger mb-3 h-100">
+                    <div class="card-header bg-danger text-white">Log ID: @item.LogId</div>
+                    <div class="card-body text-danger">
+                        <h5 class="card-title">@item.CityName</h5>
+                        <p class="card-text display-4">@item.Temperature <small class="fs-6">°C</small></p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,59 @@
+@model IEnumerable<Web.Entity.DailyLog>
+
+@{
+    ViewData["Title"] = "Admin Paneli";
+    Layout = "_OzelLayout";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="mb-0">📊 Günlük Hava Kayıtları (PostgreSQL)</h2>
+        <div>
+            <a asp-action="Raporlar" class="btn btn-info text-white me-2">
+                <i class="fa-solid fa-file-lines me-1"></i> Raporlar (View)
+            </a>
+            <a asp-action="Create" class="btn btn-success">
+                <i class="fa-solid fa-plus me-1"></i> Yeni Kayıt
+            </a>
+        </div>
+    </div>
+    
+    <div class="alert alert-info">
+        Bu veriler <b>allproject</b> veritabanındaki <b>DailyLogs</b> tablosundan çekilmektedir.
+    </div>
+
+    <table class="table table-striped table-hover shadow-sm">
+        <thead class="table-dark">
+            <tr>
+                <th>Tarih</th>
+                <th>Şehir</th>
+                <th>Sıcaklık</th>
+                <th>Hava Tipi</th>
+                <th>Kaydeden</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.LogDate?.ToString("dd.MM.yyyy HH:mm")</td>
+                    <td>@item.City?.CityName</td> <!-- İlişkili tablodan veri -->
+                    <td>
+                        <span class="badge bg-primary">@item.Temperature °C</span>
+                    </td>
+                    <td>@item.WeatherType?.TypeName</td> <!-- İlişkili tablodan veri -->
+                    <td>@item.User?.Username</td> <!-- İlişkili tablodan veri -->
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.LogId" class="btn btn-warning btn-sm text-white">
+                            <i class="fa-solid fa-pen"></i> Düzenle
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@item.LogId" class="btn btn-danger btn-sm" onclick="return confirm('Silmek istediğine emin misin?');">
+                            <i class="fa-solid fa-trash"></i> Sil
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

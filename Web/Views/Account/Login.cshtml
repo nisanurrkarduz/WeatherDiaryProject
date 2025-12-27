@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Giriş Yap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card shadow-lg border-0 rounded-lg">
+                <div class="card-header bg-primary text-white text-center py-3">
+                    <h3 class="font-weight-light my-2">Giriş Yap</h3>
+                </div>
+                <div class="card-body p-4">
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success">
+                            <i class="fa-solid fa-check-circle me-2"></i> @TempData["Success"]
+                        </div>
+                    }
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger">
+                            <i class="fa-solid fa-circle-exclamation me-2"></i> @ViewBag.Error
+                        </div>
+                    }
+
+                    <form method="post">
+                        <div class="form-floating mb-3">
+                            <input class="form-control" name="username" type="text" placeholder="Kullanıcı Adı" required />
+                            <label>Kullanıcı Adı</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" name="password" type="password" placeholder="Şifre" required />
+                            <label>Şifre</label>
+                        </div>
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">Giriş Yap</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center py-3">
+                    <div class="small">
+                        <a asp-action="Register" class="text-decoration-none">Hesabın yok mu? Kayıt Ol!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

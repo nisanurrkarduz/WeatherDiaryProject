@@ -1,0 +1,99 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+    string duygu = ViewBag.Durum as string;
+    string renk = "bg-secondary"; 
+
+    if (duygu == "Mutlu") { renk = "bg-success bg-gradient"; } 
+    else if (duygu == "Stresli") { renk = "bg-danger bg-gradient"; } 
+    else if (duygu == "Mutsuz") { renk = "bg-warning bg-gradient text-dark"; } 
+    else if (duygu == "Nötr") { renk = "bg-info bg-gradient text-dark"; } 
+
+    string sehir = ViewBag.SecilenSehir as string ?? "İstanbul";
+}
+
+<div class="text-center py-5">
+    <div class="mb-5">
+        <h1 class="display-4 fw-bold text-white mb-3">
+            Hava Durumu Bazlı <span class="text-primary">Duygu Analizi</span>
+        </h1>
+        <p class="lead text-muted">
+            Bugün <strong>@sehir</strong>'daki hava durumuna göre yapay zeka tahmini
+        </p>
+    </div>
+
+    @if (ViewBag.SecilenSehir != null || ViewBag.SecilenKonum != null)
+    {
+        <div class="alert alert-info shadow-sm border-0 rounded-4 w-75 mx-auto mb-4">
+            @if (ViewBag.SecilenSehir != null)
+            {
+                <div><strong>Seçilen Şehir:</strong> @ViewBag.SecilenSehir</div>
+            }
+            @if (ViewBag.SecilenKonum != null)
+            {
+                <div><strong>Seçilen Konum:</strong> @ViewBag.SecilenKonum</div>
+            }
+        </div>
+    }
+
+    @if (ViewBag.Hata != null)
+    {
+        <div class="alert alert-danger shadow-sm border-0 rounded-4 w-75 mx-auto">
+            <i class="fa-solid fa-circle-exclamation me-2"></i> @ViewBag.Hata
+        </div>
+    }
+    else if (duygu != null)
+    {
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card text-white @renk mb-4 shadow-lg border-0 rounded-4 overflow-hidden transform-hover">
+                    <div class="card-header border-0 bg-transparent pt-4 pb-0">
+                        <span class="badge bg-white bg-opacity-25 rounded-pill px-3 py-2">Bugünün Raporu</span>
+                    </div>
+                    <div class="card-body py-5">
+                        <h2 class="card-title fw-bold mb-0">@duygu</h2>
+                        <div class="display-1 fw-bold my-3">@ViewBag.Sicaklik°C</div>
+                        <p class="card-text fs-5 opacity-75">
+    @((ViewBag.Mesaj as string)?.Replace(" Node.js analizi tamamlandı.", "")?.Replace("Node.js analizi tamamlandı.", ""))
+</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                @if (duygu == "Mutlu")
+                {
+                    <div class="alert alert-success shadow-sm border-0 rounded-4 d-flex align-items-center justify-content-center gap-2 py-3">
+                        <i class="fa-solid fa-sun fs-4"></i>
+                        <span><strong>Tavsiye:</strong> @ViewBag.Tavsiye</span>
+                    </div>
+                }
+                else if (duygu == "Stresli")
+                {
+                    <div class="alert alert-danger shadow-sm border-0 rounded-4 d-flex align-items-center justify-content-center gap-2 py-3">
+                        <i class="fa-solid fa-music fs-4"></i>
+                        <span><strong>Tavsiye:</strong> @ViewBag.Tavsiye</span>
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-info shadow-sm border-0 rounded-4 d-flex align-items-center justify-content-center gap-2 py-3">
+                        <i class="fa-solid fa-circle-info fs-4"></i>
+                        <span><strong>Tavsiye:</strong> @ViewBag.Tavsiye</span>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="d-flex flex-column align-items-center justify-content-center py-5">
+            <div class="spinner-border text-primary mb-3" role="status" style="width: 3rem; height: 3rem;">
+                <span class="visually-hidden">Yükleniyor...</span>
+            </div>
+            <p class="text-muted">Veriler analiz ediliyor...</p>
+        </div>
+    }
+</div>
